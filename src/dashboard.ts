@@ -18,6 +18,6 @@ const html = `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>
 <p>Submissions logged: ${logLines.length} | Queue: ${queue.queue.length} markets | Updated: ${new Date().toISOString()}</p>
 <table><tr><th>Queue</th><th>Market</th><th>Cutoff (UTC)</th><th>Status</th><th>Verdict / bounty</th></tr>
 ${rows.map((r: any) => `<tr><td>${r.id}</td><td>${r.question}<br><code>${r.market}</code></td><td>${r.cutoff}</td><td>${r.status}</td><td>${r.submission ? `${r.submission.status} — ${JSON.stringify(r.submission.markets ?? "")}` : "—"}</td></tr>`).join("\n")}
-</table><p>Source: <a href="https://github.com/forfito10/delphi-evidence-agent">github.com/forfito10/delphi-evidence-agent</a> · Competition: <a href="https://competition.delphi.fyi/">competition.delphi.fyi</a></p></body></html>`;
+</table><p>Source: <a href="https://github.com/sarjanacrypto10/delphi-evidence-agent">github.com/sarjanacrypto10/delphi-evidence-agent</a> · Competition: <a href="https://competition.delphi.fyi/">competition.delphi.fyi</a></p></body></html>`;
 writeFileSync(new URL("../dashboard.html", import.meta.url), html);
 console.log("dashboard.html written,", rows.length, "rows,", logLines.length, "log lines");
