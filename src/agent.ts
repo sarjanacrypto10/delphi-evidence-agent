@@ -57,12 +57,17 @@ async function main() {
     if (dryRun) { console.log(`dry-run: would submit ${item.id} to ${item.market}`); continue; }
     const { data } = await ev.submitEvidence({ marketAddress: item.market, note: item.note, links: item.links });
     log({ at: new Date().toISOString(), queueId: item.id, market: item.market, submissionId: data.id, status: data.status });
-    const result = data.status === "rejected" ? data : (await ev.waitForSubmission(data.id)).data;
-    log({ at: new Date().toISOString(), queueId: item.id, market: item.market, submissionId: data.id, status: result.status, markets: result.markets });
-    // Mark submitted in queue.json so a re-run never re-submits the same fact.
+    // Mark submitted IMMEDIATELY — the submission is saved server-side even
+    // if the verdict poll below times out; never re-submit the same fact.
     const q2 = loadQueue();
     const it = q2.queue.find((x) => x.id === item.id);
     if (it) { it.status = `submitted:${data.id}`; writeFileSync(QUEUE_FILE, JSON.stringify(q2, null, 2)); }
+    let result = data;
+    if (data.status !== "rejected") {
+      try { result = (await ev.waitForSubmission(data.id)).data; }
+      catch (e) { console.log(`verdict poll timed out for ${data.id}; submission is queued, check GET /v1/submissions/${data.id} later`); }
+    }
+    log({ at: new Date().toISOString(), queueId: item.id, market: item.market, submissionId: data.id, status: result.status, markets: result.markets });
     // One submission per run per market is the safe default; the operator
     // re-runs for the next market. Remove this break to batch a full pass.
     break;
