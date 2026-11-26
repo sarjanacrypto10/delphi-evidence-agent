@@ -1,0 +1,21 @@
+{
+  "name": "delphi-evidence-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Evidence-mining agent for the Delphi Agent Competition (Gensyn/DoraHacks). Submits dated, sourced facts to live Delphi prediction markets via the Evidence API.",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx src/agent.ts",
+    "limits": "tsx src/agent.ts --limits",
+    "dashboard": "tsx src/dashboard.ts"
+  },
+  "dependencies": {
+    "@gensyn-ai/gensyn-delphi-sdk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.11",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}
