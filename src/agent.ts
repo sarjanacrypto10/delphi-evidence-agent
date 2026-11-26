@@ -51,6 +51,18 @@ async function main() {
     .sort((a, b) => new Date(a.cutoff).getTime() - new Date(b.cutoff).getTime());
   for (const item of items) {
     if (Date.parse(item.cutoff) <= Date.now()) { console.log(`skip ${item.id}: past cutoff ${item.cutoff}`); continue; }
+    // DUPLICATE GATE (user rule, 26 Nov 13:08 + 13:15 WIB: never submit a
+    // duplicate — "pastikan bukan duplikat"). A queue item may only be
+    // submitted when it carries verifiedFresh: true, i.e. a human/agent
+    // check confirmed the fact is either (a) an event that just happened
+    // and did not exist before, (b) a genuinely new measurement/synthesis,
+    // or (c) a niche primary source — with freshDate + freshReason recorded
+    // on the item. Anything published and already circulating is a
+    // duplicate: the judge rejected Vox, War Materiel and Go backports 3/3.
+    if ((item as any).verifiedFresh !== true) {
+      console.log(`skip ${item.id}: DUPLICATE GATE — not verified fresh (needs verifiedFresh:true + freshDate + freshReason)`);
+      continue;
+    }
     const { data: entry } = await ev.getEntryState(item.market);
     console.log(item.id, "entry-state:", JSON.stringify(entry));
     if (!entry.canSubmit) continue;
