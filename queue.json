@@ -21,8 +21,8 @@
       "market": "0x3c8a98eb4ebca3156af93bf85c76bb3ac13ab4b0",
       "question": "Will nodejs.org/dist/index.json list Node.js v26.14.0 or later with a release date on or before Dec 11, 2026?",
       "cutoff": "2026-12-10T23:59:59Z",
-      "status": "pending",
-      "note": "The nodejs/node repository has a v26.14.0-proposal branch whose HEAD commit (21 Nov 2026 15:57 UTC) is titled '2026-11-30, Version 26.14.0 Lithium (LTS)' — i.e. Node.js has staged v26.14.0 for release on 30 November 2026, 11 days before this market's deadline. The branch also carries an npm upgrade to 11.21.3 (19 Nov). Transparency: the branch was created 21 Nov, before this market was created on 24 Nov; the claim is that the forecaster has not tied this staging branch to this market. Node v26 shipped 14 minors between 5 May and 28 Oct 2026, gaps of 1-20 days; by 11 Dec it will be 44 days since v26.13.0 (28 Oct).",
+      "status": "held:duplicate-risk branch staged 21 Nov pre-baseline; wait for 30 Nov release",
+      "note": "The nodejs/node repository has a v26.14.0-proposal branch whose HEAD commit (21 Nov 2026 15:57 UTC) is titled '2026-11-30, Version 26.14.0 Lithium (LTS)' \u2014 i.e. Node.js has staged v26.14.0 for release on 30 November 2026, 11 days before this market's deadline. The branch also carries an npm upgrade to 11.21.3 (19 Nov). Transparency: the branch was created 21 Nov, before this market was created on 24 Nov; the claim is that the forecaster has not tied this staging branch to this market. Node v26 shipped 14 minors between 5 May and 28 Oct 2026, gaps of 1-20 days; by 11 Dec it will be 44 days since v26.13.0 (28 Oct).",
       "links": [
         "https://github.com/nodejs/node/tree/v26.14.0-proposal",
         "https://nodejs.org/dist/index.json"
@@ -47,7 +47,7 @@
       "market": "0xf640443d15af94932e1a7294c15312f0ad9e1136",
       "question": "Will Go 1.27.5 be listed with a release date at go.dev/doc/devel/release by 2026-12-08 23:59 UTC?",
       "cutoff": "2026-12-07T23:59:00Z",
-      "status": "pending",
+      "status": "submitted:2456a4e6-fb12-48d1-8681-45efedf13bea",
       "note": "On 24-25 Nov 2026, two new Security-labelled backport issues were filed for the next 1.27 minor release: golang/go #83346 (net/http quadratic HTTP/2 server CPU usage, created 24 Nov 17:46 UTC) and #83384 (net/http HTTPS proxy HTTP/2 connection pooled under target authority, created 25 Nov 16:20 UTC, backport requested by @neild). Both appear in the Go 1.27.5 section of the Go Release Dashboard. As of 26 Nov 2026 the dashboard lists 13 items under Go1.27.5, including compiler miscompiles, and several backport CLs are already merged to release-branch.go1.27. Latest release is go1.27.4 (10 Nov 2026).",
       "links": [
         "https://github.com/golang/go/issues/83346",
@@ -65,7 +65,7 @@
       "note": "As of 24 Nov 2026 (INEGI bulletin 701/26): Mexico INPC for the first half of November was 3.96% YoY, up from 3.75% in October, +0.54% biweekly. This is a fortnightly print, not the full-month figure the market resolves on, but it anchors the full month: the second half would need outright deflation to drag the full-month rate below 3.80%. Driver: electricity +20.74% in two weeks as the summer tariff subsidy ended, alone +0.283pp of the fortnight's +0.54%. Core moved the other way: -0.10% biweekly, slowing to 3.68% YoY (from 3.78-3.80% in Oct), below the 3.88% expected.",
       "priority": 3,
       "question": "Will INEGI report Mexico's annual CPI (INPC) inflation for Nov 2026 at 3.80% or higher on Dec 9, 2026?",
-      "status": "pending"
+      "status": "held:duplicate-risk published CPI print pre-baseline"
     },
     {
       "id": "ietf-01",
@@ -73,8 +73,8 @@
       "market": "0xda5d046f5bac4bbfa5abe32bc52787725548d4ee",
       "question": "Will any IESG member record a DISCUSS on draft-ietf-mpls-mna-ioam in the IETF Datatracker by 2026-12-03 23:59 UTC?",
       "cutoff": "2026-12-02T12:00:00Z",
-      "status": "pending",
-      "note": "On 24 Nov 2026 the INTDIR telechat review of draft-ietf-mpls-mna-ioam-17 by Justin Iurman returned 'Ready with Issues', listing 6 issues he said 'should be resolved before publication' (including undefined N/I flag encoding, an R-bit claim contradicting RFC 9197, a U-bit that could drop user packets, and data-integrity pointer issues). The review email is dated Tue, 24 Nov 2026 22:24:59 UTC — about 13 hours after this market was created. Ballot as of 26 Nov: 1 Yes (Jim Guichard, 9 Nov), 14 No Record, telechat 3 Dec 2026. Counterweight, stated honestly: draft-18, published 24 Nov 2026, already addresses most INTDIR issues (integrity variants 64/66/67 added, R-bit sentence removed, Hop_Lim fixed, U-bit reworked), and a re-review of -18 is requested with deadline 1 Dec. The claim is not that a DISCUSS is certain, but that DISCUSS risk rose because of 6 substantive issues plus a pending re-review plus 14 unrecorded positions ahead of the 3 Dec telechat.",
+      "status": "held:duplicate-risk review 2 days old, likely ingested; wait for 1 Dec re-review",
+      "note": "On 24 Nov 2026 the INTDIR telechat review of draft-ietf-mpls-mna-ioam-17 by Justin Iurman returned 'Ready with Issues', listing 6 issues he said 'should be resolved before publication' (including undefined N/I flag encoding, an R-bit claim contradicting RFC 9197, a U-bit that could drop user packets, and data-integrity pointer issues). The review email is dated Tue, 24 Nov 2026 22:24:59 UTC \u2014 about 13 hours after this market was created. Ballot as of 26 Nov: 1 Yes (Jim Guichard, 9 Nov), 14 No Record, telechat 3 Dec 2026. Counterweight, stated honestly: draft-18, published 24 Nov 2026, already addresses most INTDIR issues (integrity variants 64/66/67 added, R-bit sentence removed, Hop_Lim fixed, U-bit reworked), and a re-review of -18 is requested with deadline 1 Dec. The claim is not that a DISCUSS is certain, but that DISCUSS risk rose because of 6 substantive issues plus a pending re-review plus 14 unrecorded positions ahead of the 3 Dec telechat.",
       "links": [
         "https://mailarchive.ietf.org/arch/msg/int-dir/N_ziOna7TDNXJGZsqdJWf_WDBmc",
         "https://datatracker.ietf.org/doc/draft-ietf-mpls-mna-ioam/ballot/"
@@ -88,10 +88,10 @@
         "https://qncnews.com/2026/11/21/komeito-refuses-to-back-takaichi-food-tax-bill-as-upper-house-majority-stays-out-of-reach/"
       ],
       "market": "0x169f02be2177934e0d9fbb29c52b1d6d1891026c",
-      "note": "As of 25 Nov 2026: the ruling camp holds 119 of 246 seats in the House of Councillors (LDP 100 + Ishin 19, 2 vacancies) — two short of a majority even with Conservative Party support (121). In the special committee it holds 19 of 40 seats. Komeito leader Mitsunari Okamoto said on 16 Nov his party 'cannot support the bill as it stands' over the ~5 trillion yen/year funding gap. On 24 Nov, six opposition parties agreed not to take part in deliberations 'for the time being' after Education Minister Yoshihiro Seki was accused of giving a false answer about political fundraising; a censure motion was to be submitted 26 Nov and voted on 27 Nov. As of 26 Nov no vote on the tax bill has been scheduled; the session ends 12 Dec.",
+      "note": "As of 25 Nov 2026: the ruling camp holds 119 of 246 seats in the House of Councillors (LDP 100 + Ishin 19, 2 vacancies) \u2014 two short of a majority even with Conservative Party support (121). In the special committee it holds 19 of 40 seats. Komeito leader Mitsunari Okamoto said on 16 Nov his party 'cannot support the bill as it stands' over the ~5 trillion yen/year funding gap. On 24 Nov, six opposition parties agreed not to take part in deliberations 'for the time being' after Education Minister Yoshihiro Seki was accused of giving a false answer about political fundraising; a censure motion was to be submitted 26 Nov and voted on 27 Nov. As of 26 Nov no vote on the tax bill has been scheduled; the session ends 12 Dec.",
       "priority": 4,
       "question": "Will Japan's House of Councillors pass the food consumption tax cut bill in a plenary vote on or before Dec 9, 2026?",
-      "status": "pending"
+      "status": "held:duplicate-risk freeze already known; wait for 27 Nov vote result as refresh"
     },
     {
       "id": "wikipedia-01",
@@ -99,8 +99,8 @@
       "market": "0x7a17b76f7f1cda20e8bc5a88166c4732e6db39f5",
       "question": "Will English Wikipedia siteinfo API show >=7,275,500 articles at 12:00 UTC on Dec 10, 2026?",
       "cutoff": "2026-12-09T11:00:00Z",
-      "status": "pending",
-      "note": "As of 26 Nov 2026 05:31 UTC the English Wikipedia siteinfo API shows 7,269,403 articles — 6,097 short of 7,275,500 with 14.27 days to the 10 Dec 12:00 UTC check, requiring about 427 net new articles/day. Measured growth 2 Oct-26 Nov 2026 was 7,246,791 to 7,269,403 = +22,612 in 55 days, about 411/day, BELOW the required rate; at that pace the count reaches only about 7,275,280 by the deadline. The often-quoted about 500/day figure (Wikipedia:Statistics, Nov 2026) is a longer-run average, not the recent pace — the 25 Nov count was 7,269,127, i.e. +276 in the last day. This is a close market; the claim is 'recent pace is below the required rate', not a certain pass or fail.",
+      "status": "held:duplicate-risk public API data; submit only with fresh re-measurement",
+      "note": "As of 26 Nov 2026 05:31 UTC the English Wikipedia siteinfo API shows 7,269,403 articles \u2014 6,097 short of 7,275,500 with 14.27 days to the 10 Dec 12:00 UTC check, requiring about 427 net new articles/day. Measured growth 2 Oct-26 Nov 2026 was 7,246,791 to 7,269,403 = +22,612 in 55 days, about 411/day, BELOW the required rate; at that pace the count reaches only about 7,275,280 by the deadline. The often-quoted about 500/day figure (Wikipedia:Statistics, Nov 2026) is a longer-run average, not the recent pace \u2014 the 25 Nov count was 7,269,127, i.e. +276 in the last day. This is a close market; the claim is 'recent pace is below the required rate', not a certain pass or fail.",
       "links": [
         "https://en.wikipedia.org/w/api.php?action=query&meta=siteinfo&siprop=statistics&format=json",
         "https://en.wikipedia.org/wiki/Wikipedia:Size_of_Wikipedia"
@@ -117,7 +117,7 @@
       "note": "As of 25 Nov 2026: the Democratic Party holds an outright majority, 161 of 299 seats, and can end a filibuster after 24 hours. If the Budget Committee fails by 30 Nov, the bill is automatically referred to plenary on 1 Dec under the National Assembly Act, so a vote can happen even with no committee agreement. The live blocker, dated 25 Nov: PPP street rallies / effective boycott plus the DP impeachment push against Chief Justice Jo Hee-de have left the Assembly 'effectively ceased to function'; DP floor leader Han Byung-do on 25 Nov urged PPP lawmakers to return so the budget passes within the legal deadline of 2 Dec. Contested item: the 162.3 trillion won Future Response Fund, which PPP wants removed entirely.",
       "priority": 5,
       "question": "Will the Korean National Assembly pass the 2027 budget bill in a plenary vote by Dec 2, 2026 23:59 KST?",
-      "status": "pending"
+      "status": "held:duplicate-risk published 24-25 Nov press"
     },
     {
       "id": "arc-01",
@@ -125,8 +125,8 @@
       "market": "0xa96dc716066329d666f3c50e6d8f71c701347296",
       "question": "Will 'Yi-Chia Chen @ Fields Model' rank 1st on the ARC-AGI-3 Kaggle final private leaderboard (ARC Prize 2026), announced Dec 4, 2026?",
       "cutoff": "2026-12-02T18:00:00Z",
-      "status": "pending",
-      "note": "As of 10 Nov 2026 (final public leaderboard, competition ended 2 Nov 2026): Yi-Chia Chen @ Fields Model leads ARC-AGI-3 at 75.56, ahead of Tufa Labs at 70.24 — a 5.32-point gap — and NVARC3 at 60.95. Yi-Chia reached that score with 50 entries; Tufa submitted 180 entries and still trails by 5.32 points. Yi-Chia is also 2nd on the ARC-AGI-2 public leaderboard at 87.22. Caveat, stated honestly: the private leaderboard is based on the other 50% of test data and Kaggle warns final standings may differ; the public lead is large and hard-earned, but a private flip would need Tufa to gain more than 5.32 on unseen games.",
+      "status": "held:duplicate-risk public leaderboard frozen 2 Nov",
+      "note": "As of 10 Nov 2026 (final public leaderboard, competition ended 2 Nov 2026): Yi-Chia Chen @ Fields Model leads ARC-AGI-3 at 75.56, ahead of Tufa Labs at 70.24 \u2014 a 5.32-point gap \u2014 and NVARC3 at 60.95. Yi-Chia reached that score with 50 entries; Tufa submitted 180 entries and still trails by 5.32 points. Yi-Chia is also 2nd on the ARC-AGI-2 public leaderboard at 87.22. Caveat, stated honestly: the private leaderboard is based on the other 50% of test data and Kaggle warns final standings may differ; the public lead is large and hard-earned, but a private flip would need Tufa to gain more than 5.32 on unseen games.",
       "links": [
         "https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-3/leaderboard"
       ]
@@ -139,10 +139,10 @@
         "https://www.fx.co/bd/forex-news/3293870"
       ],
       "market": "0x48c2f4d761be00f8d9342a7de34d54673c506631",
-      "note": "As of 3 Nov 2026 (TurkStat): Turkey CPI was 29.77% YoY in October 2026 (from 29.73% in September), +2.58% MoM — a six-month high, above the 2.40% consensus; monthly accelerated from 1.84% in September. The CBRT November Survey of Market Participants (13 Nov 2026) raised the year-end CPI expectation to 30.04% (from 29.63% in October), with an implied November monthly expectation of about 1.09%. Cumulative Jan-Oct price rise is 27.52%; to finish the year below 30%, November plus December combined must stay below about 1.945%. ING (3 Nov) still expects annual inflation to remain below 30% at year-end; CBRT raised its own end-2026 forecast to 29.5% on 12 Nov (from 28%). This market resolves on TurkStat only, not ENAG.",
+      "note": "As of 3 Nov 2026 (TurkStat): Turkey CPI was 29.77% YoY in October 2026 (from 29.73% in September), +2.58% MoM \u2014 a six-month high, above the 2.40% consensus; monthly accelerated from 1.84% in September. The CBRT November Survey of Market Participants (13 Nov 2026) raised the year-end CPI expectation to 30.04% (from 29.63% in October), with an implied November monthly expectation of about 1.09%. Cumulative Jan-Oct price rise is 27.52%; to finish the year below 30%, November plus December combined must stay below about 1.945%. ING (3 Nov) still expects annual inflation to remain below 30% at year-end; CBRT raised its own end-2026 forecast to 29.5% on 12 Nov (from 28%). This market resolves on TurkStat only, not ENAG.",
       "priority": 6,
       "question": "Will TurkStat report Turkey's annual CPI inflation for November 2026 at 30.00% or higher on Dec 3, 2026?",
-      "status": "pending"
+      "status": "held:duplicate-risk published CPI print pre-baseline"
     },
     {
       "cutoff": "2026-11-29T08:00:00Z",
@@ -152,10 +152,10 @@
         "https://publikationen.bundesbank.de/publikationen-en/reports-studies/monthly-reports/monthly-report-november-2026-1016266"
       ],
       "market": "0x0d79f61a3cf6c6a83501fcb6abd22eddb4ab6a58",
-      "note": "As of 11 Nov 2026 (Destatis final October release, corrected 17 Nov): German CPI was +2.8% YoY in October 2026 (September: +3.3%), -0.2% MoM. Prices fell 0.2% MoM in November 2025, so if prices were flat in November 2026 the YoY rate would be about 3.0% — above the 2.8% threshold — before any November price move is counted. Composition (Destatis 11 Nov): energy +12.7% YoY; heating oil +84.5% YoY (September: +74.9%), +4.6% MoM — not dampened by the fuel rebate (Tankrabatt); motor fuel +28.9% YoY but -5.5% MoM after the Tankrabatt cut fuel tax by about 17 cents/litre until end-2026. Core (ex food and energy) fell to 2.1%. Bundesbank Monthly Report (19 Nov): inflation could hover around its current level until year-end.",
+      "note": "As of 11 Nov 2026 (Destatis final October release, corrected 17 Nov): German CPI was +2.8% YoY in October 2026 (September: +3.3%), -0.2% MoM. Prices fell 0.2% MoM in November 2025, so if prices were flat in November 2026 the YoY rate would be about 3.0% \u2014 above the 2.8% threshold \u2014 before any November price move is counted. Composition (Destatis 11 Nov): energy +12.7% YoY; heating oil +84.5% YoY (September: +74.9%), +4.6% MoM \u2014 not dampened by the fuel rebate (Tankrabatt); motor fuel +28.9% YoY but -5.5% MoM after the Tankrabatt cut fuel tax by about 17 cents/litre until end-2026. Core (ex food and energy) fell to 2.1%. Bundesbank Monthly Report (19 Nov): inflation could hover around its current level until year-end.",
       "priority": 7,
       "question": "Will Destatis's preliminary German CPI (VPI) annual rate for Nov 2026, published 2026-11-30, be 2.8% or higher?",
-      "status": "pending"
+      "status": "held:duplicate-risk published CPI print pre-baseline"
     },
     {
       "cutoff": "2026-12-01T07:00:00Z",
@@ -165,10 +165,10 @@
         "https://www.bfs.admin.ch/en/newnsb/JrBG3ZuNaVyE"
       ],
       "market": "0xecace7b63b2e044dd339e7512cf4360713a8e156",
-      "note": "As of 3 Nov 2026 (FSO): Swiss CPI rose 1.5% YoY in October 2026, up from 1.0% in September — the highest since December 2023 and above every economist in the Bloomberg survey (consensus 1.3%). The SNB had projected 1.2% average inflation for Q4, so November and December would have to average about 1.05% for that forecast to hold. Core inflation was unchanged at 0.5%. SNB chairman Martin Schlegel said on 4 Nov the reading came in higher than even the central bank had expected. As of 13 Nov 2026 (FSO): producer and import prices +0.9% MoM, +0.9% YoY — first positive YoY since May 2023; import prices +4.3% YoY, heating oil +31% YoY. Counterweight: Brent fell about 18% over November to 13 Nov, so the energy contribution to November CPI may fade.",
+      "note": "As of 3 Nov 2026 (FSO): Swiss CPI rose 1.5% YoY in October 2026, up from 1.0% in September \u2014 the highest since December 2023 and above every economist in the Bloomberg survey (consensus 1.3%). The SNB had projected 1.2% average inflation for Q4, so November and December would have to average about 1.05% for that forecast to hold. Core inflation was unchanged at 0.5%. SNB chairman Martin Schlegel said on 4 Nov the reading came in higher than even the central bank had expected. As of 13 Nov 2026 (FSO): producer and import prices +0.9% MoM, +0.9% YoY \u2014 first positive YoY since May 2023; import prices +4.3% YoY, heating oil +31% YoY. Counterweight: Brent fell about 18% over November to 13 Nov, so the energy contribution to November CPI may fade.",
       "priority": 8,
       "question": "Will Swiss FSO report Nov 2026 CPI YoY inflation >=1.6% in its Dec 2 release?",
-      "status": "pending"
+      "status": "held:duplicate-risk published CPI print pre-baseline"
     }
   ]
 }
